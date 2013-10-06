@@ -1,0 +1,132 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Mandala </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link href="/allSiteLib/main.css" rel="stylesheet"/>
+    <script src ="/allSiteLib/jquery-1.7.1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    
+    <!-- Used for the Popout on the detector -->
+    <link href="/allSiteLib/jquery-ui-1.9.1.custom/css/theme1/jquery-ui-1.9.1.custom.css" rel="stylesheet" type="text/css"/>
+
+
+    <style>
+        body {
+          background-color: #000000;
+          margin: 0px;
+          overflow: hidden;
+        }
+
+        a {
+          color: #ffffff;
+        }
+
+
+        #info{
+          padding:20px;
+          position:absolute;
+          top:0px;
+          left:0px;
+          color:#fff;
+          font-family: "GeoSans";
+        }
+
+
+        #textureData{
+          position:absolute;
+          left:0px;
+          top:0px;
+        }
+
+        @font-face {
+          font-family: "GeoSans";
+          src: url("/allSiteLib/GeosansLight.ttf");
+        }
+
+      </style>
+
+  </head>
+  <body>
+
+  <!--DIV FOR BROWSER COMPATIBILITY-->
+  <div id="dialog" title="Browser Incompatibility" style="display:none;">
+    <div id="dialogBody">Your browser is missing the following:<br/></div>
+    <br/>
+    <div id="dialogLinks">
+      <a href="http://cabbibo.com/">Take me home.</a><br/><br/>     
+    </div>
+  </div>
+
+
+  <div id="container"></div>
+
+  <div id="info">
+
+    <h1>William Basinski - 92982.1 </h1>
+
+    Drag mouse to change orientation,
+    Scroll to zoom.<br/>
+    Toggle interface by pressing 'x'<br/><br/>
+
+  </div>
+  
+  <a id="takeMeHome" href="http://cabbibo.com/"></a>
+
+  <script src="//js.leapmotion.com/0.2.0/leap.min.js">  </script>
+  <script src="/allSiteLib/three.js">                   </script>
+  <script src="/allSiteLib/stats.min.js">               </script>
+  
+  <script src="/allSiteLib/js/compatibility.js">        </script>
+  <script src="/allSiteLib/OrbitControls.js">           </script>
+  <script src="/allSiteLib/math.js">                    </script>
+  <script src="/allSiteLib/underscore.js">              </script>
+
+  <script src="/allSiteLib/js/UTILS.js">                </script>
+  <script src="/allSiteLib/Tween.js">                   </script>
+  <script src="/allSiteLib/TileRenderer.js">            </script>
+  <script src="/allSiteLib/js/LOADER.js">               </script>
+  <script src="/allSiteLib/js/colors.js">               </script>
+  <script src="/allSiteLib/js/AUDIO.js">                </script>
+  <script src="/allSiteLib/js/STREAM.js">               </script>
+  <script src="/allSiteLib/js/OBJloader.js">            </script>
+  <script src="/allSiteLib/js/keyStrokes.js">           </script>
+
+  <script src="mandala.js">                             </script>
+  
+  <script src="parameters.js">                          </script>
+  <script src="Event.js">                               </script>
+  <script src="Choreographer.js">                       </script>
+  
+  <script src="audio.js">                               </script>
+  <script src="initScene.js">                           </script>
+  <script src="startScene.js">                          </script>
+
+  <script>
+
+    //masterGain.gain.value = 0;
+
+    // First off, check for all the technology we need
+    var techsNeeded = [ 'webGL' , 'webkit' ];
+    detect( techsNeeded );
+
+    // EVERYTHING IS PART OF THE SCENE!!!
+    var scene;
+    
+    var loader = new LOADER( 2 , '/allSiteLib/gifs/cablogGif50White.gif' );
+
+    initScene();
+    initAudio();
+
+
+    /* NEXT STEP:
+
+    MAKE SURE CHOREOGRAPHY WORKS
+    THERE IS NO PLACE WHERE THE MANDALAS ARE ADDED TO THE SCENE! SO FIXIT */
+
+</script>
+
